@@ -16,6 +16,9 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    /* ★★★ 추가된 코드 ★★★ */
+    /* 한글 단어가 중간에 잘리는 현상 방지 (모든 요소에 적용) */
+    word-break: keep-all; 
 }
 
 /* ==================== 헤더 스타일 ==================== */
@@ -325,4 +328,139 @@ main > section {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    margin-bo
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* 원본 파일에 없던 부분 복원 */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+/* ==================== 푸터(Footer) 스타일 ==================== */
+#footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* ====================================================================== */
+/* ★★★★★ 여기부터가 수정된 반응형 코드입니다 ★★★★★ */
+/* ====================================================================== */
+
+/* ==================== 태블릿 가로 & 작은 데스크탑 (1200px 이하) ==================== */
+@media (max-width: 1200px) {
+    .header-container,
+    .section-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+/* ==================== 태블릿 세로 (992px 이하) ==================== */
+@media (max-width: 992px) {
+    /* --- 헤더 --- */
+    /* 모바일 메뉴 스타일 (태블릿부터 햄버거 메뉴 적용) */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 80px; /* 헤더 높이만큼 아래에 위치 */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid #eee;
+    }
+    .menu.active {
+        display: block;
+    }
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+    .menu ul li:last-child {
+        border-bottom: none;
+    }
+    .menu ul li a {
+        display: block;
+        padding: 15px 0;
+        width: 100%;
+        border-bottom: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    #header.menu-open {
+        background-color: white;
+    }
+
+    /* --- 그리드 레이아웃 조정 (한 줄에 2개) --- */
+    /* 제품과 설치사례는 태블릿에서 한 줄에 2개씩 보이도록 설정 */
+    .product-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==================== 모바일 (768px 이하) ==================== */
+@media (max-width: 768px) {
+    /* --- 헤더 높이 조정 --- */
+    #header {
+        height: 70px;
+    }
+    .menu {
+        top: 70px;
+    }
+    main > section { 
+        padding-top: 70px;
+    }
+
+    /* --- 폰트 크기 및 여백 재조정 --- */
+    .section-title { font-size: 28px; }
+    .section-subtitle { font-size: 16px; margin-bottom: 40px; }
+    .hero-title { font-size: 32px; }
+    .hero-subtitle { font-size: 17px; padding: 0 10px; }
+    .section-container { padding: 50px 20px; }
+
+    /* --- 레이아웃을 세로로 쌓기 (모바일에서만!) --- */
+    /* 회사소개, 문의하기 레이아웃을 모바일에서만 세로로 변경 */
+    .features-wrapper,
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* 제품과 설치사례는 모바일에서 한 줄에 1개씩으로 변경 */
+    .product-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
