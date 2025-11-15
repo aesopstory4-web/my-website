@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나만의 비즈니스 웹사이트</title>
+    <!-- 1. 사이트 제목 수정 -->
+    <title>스마트로 원정보통신</title>
+    <!-- 2. 파비콘 (favicon.ico 파일을 프로젝트 루트에 넣어주세요) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- ==================== 헤더 영역 (로고와 메뉴) ==================== -->
     <header id="header">
-    <div class="header-container">
-        <div class="logo">
-            <a href="#home">스마트로 원정보통신</a>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">스마트로 원정보통신</a>
+            </div>
+            <!-- 3. 모바일 메뉴를 위한 구조 변경 -->
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li><a href="#about">회사소개</a></li>
+                    <li><a href="#products">제품소개</a></li>
+                    <li><a href="#portfolio">설치사례</a></li>
+                    <li><a href="#contact">문의하기</a></li>
+                </ul>
+            </nav>
+            <!-- 햄버거 버튼 추가 -->
+            <button class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#about">회사소개</a></li>
-                <li><a href="#products">제품소개</a></li>
-                <li><a href="#portfolio">설치사례</a></li>
-                <li><a href="#contact">문의하기</a></li>
-            </ul>
-        </nav>
-    </div>
-
-        <!-- 이 공간은 Step 2에서 채울 예정입니다. -->
     </header>
 
     <!-- ==================== 메인 콘텐츠 영역 ==================== -->
@@ -32,238 +40,108 @@
 
         <!-- 섹션 1: 메인 배너 (Hero Section) -->
         <section id="home">
-            <!-- "소상공인 사장님들의 성공 파트너" 문구가 있는 큰 이미지 영역 -->
-         <div class="hero-container">
-        <h1 class="hero-title">성공적인 비즈니스를 위한 첫걸음</h1>
-        <p class="hero-subtitle">최고의 기술력과 서비스로 당신의 성공을 돕는 파트너가 되겠습니다.</p>
-        <a href="#contact" class="hero-button">지금 바로 문의하기</a>
-    </div>
+            <div class="hero-container">
+                <h1 class="hero-title">성공적인 비즈니스를 위한 첫걸음</h1>
+                <p class="hero-subtitle">최고의 기술력과 서비스로 당신의 성공을 돕는 파트너가 되겠습니다.</p>
+                <a href="#contact" class="hero-button">지금 바로 문의하기</a>
+            </div>
         </section>
 
         <!-- 섹션 2: 회사 소개 (About) -->
         <section id="about">
-            <!-- "왜 부산포스일까요?" 와 같은 회사 강점 소개 영역 -->
-                 <div class="section-container">
-        <h2 class="section-title">Why Choose Us?</h2>
-        <p class="section-subtitle">우리가 고객에게 신뢰를 주는 3가지 이유</p>
-        
-        <div class="features-wrapper">
-            <!-- 강점 1 -->
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <!-- 아이콘 (나중에 이미지나 아이콘 폰트로 대체 가능) -->
-                    ★
+            <div class="section-container">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <p class="section-subtitle">우리가 고객에게 신뢰를 주는 3가지 이유</p>
+                <div class="features-wrapper">
+                    <div class="feature-item">
+                        <div class="feature-icon">★</div>
+                        <h3 class="feature-title">최고의 제품</h3>
+                        <p class="feature-description">최신 기술이 적용된 안정적이고 빠른 제품만을 엄선하여 제공합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <h3 class="feature-title">합리적인 가격</h3>
+                        <p class="feature-description">불필요한 유통 마진을 없애고 고객에게 가장 합리적인 가격을 제안합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">♥</div>
+                        <h3 class="feature-title">철저한 사후관리</h3>
+                        <p class="feature-description">설치에서 끝나는 것이 아닌, 신속하고 책임감 있는 AS로 비즈니스를 지원합니다.</p>
+                    </div>
                 </div>
-                <h3 class="feature-title">최고의 제품</h3>
-                <p class="feature-description">
-                    최신 기술이 적용된 안정적이고 빠른 제품만을 엄선하여 제공합니다.
-                </p>
             </div>
-
-            <!-- 강점 2 -->
-            <div class="feature-item">
-                <div class="feature-icon">
-                    ✔
-                </div>
-                <h3 class="feature-title">합리적인 가격</h3>
-                <p class="feature-description">
-                    불필요한 유통 마진을 없애고 고객에게 가장 합리적인 가격을 제안합니다.
-                </p>
-            </div>
-
-            <!-- 강점 3 -->
-            <div class="feature-item">
-                <div class="feature-icon">
-                    ♥
-                </div>
-                <h3 class="feature-title">철저한 사후관리</h3>
-                <p class="feature-description">
-                    설치에서 끝나는 것이 아닌, 신속하고 책임감 있는 AS로 비즈니스를 지원합니다.
-                </p>
-            </div>
-        </div>
-    </div>
         </section>
 
- <!-- 섹션 3: 제품 소개 (Products) -->
-<section id="products">
-    <div class="section-container">
-        <h2 class="section-title">Our Products</h2>
-        <p class="section-subtitle">스마트로 원정보통신의 다양한 제품 라인업을 확인해보세요.</p>
-
-        <div class="product-grid">
-            <!-- 제품 1 -->
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="images/product-1.png" alt="스마트 포스 S-100">
-                </div>
-                <div class="product-content">
-                    <h3 class="product-name">스마트 포스 S-100</h3>
-                    <p class="product-description">최신형 안드로이드 기반의 빠르고 안정적인 스마트 포스기</p>
+        <!-- 섹션 3: 제품 소개 (Products) -->
+        <section id="products">
+            <div class="section-container">
+                <h2 class="section-title">Our Products</h2>
+                <p class="section-subtitle">스마트로 원정보통신의 다양한 제품 라인업을 확인해보세요.</p>
+                <div class="product-grid">
+                    <div class="product-item"><div class="product-image"><img src="images/product-1.png" alt="스마트 포스 S-100"></div><div class="product-content"><h3 class="product-name">스마트 포스 S-100</h3><p class="product-description">최신형 안드로이드 기반의 빠르고 안정적인 스마트 포스기</p></div></div>
+                    <div class="product-item"><div class="product-image"><img src="images/product-2.png" alt="키오스크 K-2000"></div><div class="product-content"><h3 class="product-name">키오스크 K-2000</h3><p class="product-description">직관적인 UI로 주문 효율을 극대화하는 24인치 대화면 키오스크</p></div></div>
+                    <div class="product-item"><div class="product-image"><img src="images/product-3.png" alt="주문용 태블릿 T-5"></div><div class="product-content"><h3 class="product-name">주문용 태블릿 T-5</h3><p class="product-description">테이블에서 바로 주문과 결제가 가능한 스마트 오더 시스템</p></div></div>
+                    <div class="product-item"><div class="product-image"><img src="images/product-4.png" alt="무선 카드 단말기 M-30"></div><div class="product-content"><h3 class="product-name">무선 카드 단말기 M-30</h3><p class="product-description">배달 및 외부 결제에 최적화된 고성능 무선 카드 단말기</p></div></div>
+                    <div class="product-item"><div class="product-image"><img src="images/product-5.png" alt="주방 프린터 P-7"></div><div class="product-content"><h3 class="product-name">주방 프린터 P-7</h3><p class="product-description">방수/방진 설계로 어떤 주방 환경에서도 안정적인 작동 보장</p></div></div>
+                    <div class="product-item"><div class="product-image"><img src="images/product-6.png" alt="고객 호출벨 C-9"></div><div class="product-content"><h3 class="product-name">고객 호출벨 C-9</h3><p class="product-description">넓은 매장에서도 끊김 없는 안정적인 고객 호출 시스템</p></div></div>
                 </div>
             </div>
-            <!-- 제품 2 -->
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="images/product-2.png" alt="키오스크 K-2000">
-                </div>
-                <div class="product-content">
-                    <h3 class="product-name">키오스크 K-2000</h3>
-                    <p class="product-description">직관적인 UI로 주문 효율을 극대화하는 24인치 대화면 키오스크</p>
-                </div>
-            </div>
-            <!-- 제품 3 -->
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="images/product-3.png" alt="주문용 태블릿 T-5">
-                </div>
-                <div class="product-content">
-                    <h3 class="product-name">주문용 태블릿 T-5</h3>
-                    <p class="product-description">테이블에서 바로 주문과 결제가 가능한 스마트 오더 시스템</p>
-                </div>
-            </div>
-            <!-- 제품 4 -->
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="images/product-4.png" alt="무선 카드 단말기 M-30">
-                </div>
-                <div class="product-content">
-                    <h3 class="product-name">무선 카드 단말기 M-30</h3>
-                    <p class="product-description">배달 및 외부 결제에 최적화된 고성능 무선 카드 단말기</p>
-                </div>
-            </div>
-            <!-- 제품 5 -->
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="images/product-5.png" alt="주방 프린터 P-7">
-                </div>
-                <div class="product-content">
-                    <h3 class="product-name">주방 프린터 P-7</h3>
-                    <p class="product-description">방수/방진 설계로 어떤 주방 환경에서도 안정적인 작동 보장</p>
-                </div>
-            </div>
-            <!-- 제품 6 -->
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="images/product-6.png" alt="고객 호출벨 C-9">
-                </div>
-                <div class="product-content">
-                    <h3 class="product-name">고객 호출벨 C-9</h3>
-                    <p class="product-description">넓은 매장에서도 끊김 없는 안정적인 고객 호출 시스템</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+        </section>
 
         <!-- 섹션 4: 설치 사례 (Portfolio / Cases) -->
         <section id="portfolio">
-            <!-- 실제 설치된 사진들이 보이는 갤러리 영역 -->
-                 <div class="section-container">
-        <h2 class="section-title">Installation Cases</h2>
-        <p class="section-subtitle">다양한 업종의 사장님들이 스마트로 원정보통신과 함께하고 있습니다.</p>
-
-        <div class="portfolio-grid">
-            <!-- 설치 사례 1 -->
-            <div class="portfolio-item">
-                <img src="images/portfolio-1.png" alt="설치사례 1">
-                <div class="portfolio-overlay">
-                    <div class="overlay-text">OO 카페</div>
+            <div class="section-container">
+                <h2 class="section-title">Installation Cases</h2>
+                <p class="section-subtitle">다양한 업종의 사장님들이 스마트로 원정보통신과 함께하고 있습니다.</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item"><img src="images/portfolio-1.png" alt="설치사례 1"><div class="portfolio-overlay"><div class="overlay-text">OO 카페</div></div></div>
+                    <div class="portfolio-item"><img src="images/portfolio-2.png" alt="설치사례 2"><div class="portfolio-overlay"><div class="overlay-text">XX 식당</div></div></div>
+                    <div class="portfolio-item"><img src="images/portfolio-3.png" alt="설치사례 3"><div class="portfolio-overlay"><div class="overlay-text">△△ 베이커리</div></div></div>
+                    <div class="portfolio-item"><img src="images/portfolio-4.png" alt="설치사례 4"><div class="portfolio-overlay"><div class="overlay-text">ㅁㅁ 프랜차이즈</div></div></div>
+                    <div class="portfolio-item"><img src="images/portfolio-5.png" alt="설치사례 5"><div class="portfolio-overlay"><div class="overlay-text">◇◇ 스터디카페</div></div></div>
+                    <div class="portfolio-item"><img src="images/portfolio-6.png" alt="설치사례 6"><div class="portfolio-overlay"><div class="overlay-text">☆☆ PC방</div></div></div>
                 </div>
             </div>
-
-            <!-- 설치 사례 2 -->
-            <div class="portfolio-item">
-                <img src="images/portfolio-2.png" alt="설치사례 2">
-                <div class="portfolio-overlay">
-                    <div class="overlay-text">XX 식당</div>
-                </div>
-            </div>
-
-            <!-- 설치 사례 3 -->
-            <div class="portfolio-item">
-                <img src="images/portfolio-3.png" alt="설치사례 3">
-                <div class="portfolio-overlay">
-                    <div class="overlay-text">△△ 베이커리</div>
-                </div>
-            </div>
-
-            <!-- 설치 사례 4 -->
-            <div class="portfolio-item">
-                <img src="images/portfolio-4.png" alt="설치사례 4">
-                <div class="portfolio-overlay">
-                    <div class="overlay-text">ㅁㅁ 프랜차이즈</div>
-                </div>
-            </div>
-
-            <!-- 설치 사례 5 -->
-            <div class="portfolio-item">
-                <img src="images/portfolio-5.png" alt="설치사례 5">
-                <div class="portfolio-overlay">
-                    <div class="overlay-text">◇◇ 스터디카페</div>
-                </div>
-            </div>
-
-            <!-- 설치 사례 6 -->
-            <div class="portfolio-item">
-                <img src="images/portfolio-6.png" alt="설치사례 6">
-                <div class="portfolio-overlay">
-                    <div class="overlay-text">☆☆ PC방</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
         </section>
 
         <!-- 섹션 5: 문의하기 (Contact) -->
         <section id="contact">
-    <div class="section-container">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="section-subtitle">궁금한 점이 있으신가요? 언제든지 편하게 문의해주세요.</p>
-
-        <div class="contact-wrapper">
-            <!-- 왼쪽: 연락처 정보 -->
-            <div class="contact-info">
-                <h3>스마트로 원정보통신</h3>
-                <p><strong>전화:</strong> 051-123-4567</p>
-                <p><strong>팩스:</strong> 051-123-4568</p>
-                <p><strong>이메일:</strong> contact@smartro-won.co.kr</p>
-                <p><strong>주소:</strong> 부산광역시 OO구 OO로 123번길 45</p>
-                <p><strong>업무시간:</strong> 평일 09:00 - 18:00</p>
+            <div class="section-container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">궁금한 점이 있으신가요? 언제든지 편하게 문의해주세요.</p>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>스마트로 원정보통신</h3>
+                        <p><strong>전화:</strong> 051-123-4567</p>
+                        <p><strong>팩스:</strong> 051-123-4568</p>
+                        <p><strong>이메일:</strong> contact@smartro-won.co.kr</p>
+                        <p><strong>주소:</strong> 부산광역시 OO구 OO로 123번길 45</p>
+                        <p><strong>업무시간:</strong> 평일 09:00 - 18:00</p>
+                    </div>
+                    <div class="contact-form">
+                        <!-- 4. Formspree 연동을 위해 form 태그 수정! -->
+                        <!-- 중요! 아래 action의 "YOUR_UNIQUE_ID" 부분을 실제 Formspree ID로 바꿔주세요. -->
+                        <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                            <input type="text" name="name" placeholder="성함" required>
+                            <input type="email" name="email" placeholder="이메일" required>
+                            <input type="text" name="subject" placeholder="제목"> <!-- 제목은 필수가 아닐 수 있으니 required 제거 -->
+                            <textarea name="message" rows="5" placeholder="문의 내용" required></textarea>
+                            <button type="submit" class="submit-button">문의 접수</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <!-- 오른쪽: 문의 폼 -->
-            <div class="contact-form">
-                <form action="#">
-                    <input type="text" name="name" placeholder="성함" required>
-                    <input type="email" name="email" placeholder="이메일" required>
-                    <input type="text" name="subject" placeholder="제목" required>
-                    <textarea name="message" rows="5" placeholder="문의 내용" required></textarea>
-                    <button type="submit" class="submit-button">문의 접수</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== 푸터 영역 (하단 정보) ==================== -->
-<footer id="footer">
-    <div class="footer-container">
-        <p>&copy; 2025 스마트로 원정보통신. All Rights Reserved.</p>
-    </div>
-</footer>
-
-
+        </section>
     </main>
 
     <!-- ==================== 푸터 영역 (하단 정보) ==================== -->
     <footer id="footer">
-        <!-- 카피라이트, 회사 주소 등 하단 정보 영역 -->
+        <div class="footer-container">
+            <p>&copy; 2025 스마트로 원정보통신. All Rights Reserved.</p>
+        </div>
     </footer>
 
+    <!-- 자바스크립트 파일 연결 -->
     <script src="js/script.js"></script>
 </body>
 </html>
